@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int mas[10];
+
+void func1(int& a)
+{
+	a--;
+}
+
+int& func2(int ms[])
+{
+	int a;
+	cout << "Введите индекс элемента от 0 до 9: ";
+	cin >> a;
+	return ms[a];
+}
+
+int main()
+{
+	setlocale(0," ");
+	int b = 9;
+	func1(b);
+	cout << b << endl;
+	func2(mas)++;
+	for (int i = 0; i < 10; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
